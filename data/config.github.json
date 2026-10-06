@@ -213,7 +213,7 @@
     "time_window_hours": 24
   },
   "digest": {
-    "max_items": 30,
+    "max_items": 5,
     "profile_order": [
       "tech-news",
       "tech-blog",
