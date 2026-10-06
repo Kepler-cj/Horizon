@@ -237,8 +237,9 @@
     "request_body": {
       "topic": "horizon-cj-905b831d",
       "title": "#{message_title}",
-      "message": "#{summary?limit=1000&split=---}",
-      "markdown": true
+      "message": "#{summary?limit=1200&split=---}",
+      "markdown": true,
+      "click": "https://kepler-cj.github.io/Horizon/"
     },
     "headers": ""
   }
