@@ -28,6 +28,10 @@
       "finance-news": {
         "threshold": 7.0,
         "topic_dedup": true
+      },
+      "world-news": {
+        "threshold": 5.5,
+        "topic_dedup": true
       }
     }
   },
@@ -117,35 +121,35 @@
         "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
         "enabled": true,
         "category": "world-news",
-        "profile": "tech-news"
+        "profile": "world-news"
       },
       {
         "name": "BBC 中文",
         "url": "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml",
         "enabled": true,
         "category": "world-news",
-        "profile": "tech-news"
+        "profile": "world-news"
       },
       {
         "name": "The Guardian World",
         "url": "https://www.theguardian.com/world/rss",
         "enabled": true,
         "category": "world-news",
-        "profile": "tech-news"
+        "profile": "world-news"
       },
       {
         "name": "Al Jazeera",
         "url": "https://www.aljazeera.com/xml/rss/all.xml",
         "enabled": true,
         "category": "world-news",
-        "profile": "tech-news"
+        "profile": "world-news"
       },
       {
         "name": "德国之声中文",
         "url": "https://rss.dw.com/rdf/rss-chi-all",
         "enabled": true,
         "category": "world-news",
-        "profile": "tech-news"
+        "profile": "world-news"
       }
     ],
     "reddit": {
@@ -213,14 +217,30 @@
     "time_window_hours": 24
   },
   "digest": {
-    "max_items": 5,
+    "max_items": 10,
     "profile_order": [
       "tech-news",
       "tech-blog",
-      "finance-news"
+      "finance-news",
+      "world-news"
     ],
-    "category_groups": {},
-    "default_group": "other",
+    "category_groups": {
+      "ai-tech": {
+        "name": "AI 与科技",
+        "limit": 5,
+        "categories": [
+          "ai-tools"
+        ]
+      },
+      "world": {
+        "name": "全球要闻",
+        "limit": 5,
+        "categories": [
+          "world-news"
+        ]
+      }
+    },
+    "default_group": "ai-tech",
     "default_group_limit": null
   },
   "webhook": {
